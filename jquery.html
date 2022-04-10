@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+            a {
+                background-color:aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <a id="unslink" href="http://uns.ac.id">Link Web UNS</a>
+        <br>
+        <input id="userinfo" type="text" value=""/>
+        <br>
+        <button id="btn1">Pindai</button>
+        <p id="respont"></p>
+    </body>
+    <script>
+        $(document).ready(function(){
+            //  $("#btn1").text("Simpan");
+            //  $("#btn1").prop("disabled",true);
+            $("#userinfo").val("User Info");
+            $("#btn1").click(function(){
+                let a= '<b>' + $("#userinfo").val() + '</b>';
+                 $("#unslink").hide();
+                //  $("#userinfo").();
+            });
+        
+            $(document).keypress(function(e){
+                if(e.which==13){
+                    alert("Tombol Enter");
+                } else if(e.which==32){
+                    alert("Tombol Spasi");
+                }
+        });
+        });
+    </script>
+</html>

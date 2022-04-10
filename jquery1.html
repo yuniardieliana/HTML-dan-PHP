@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>J Query Form</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <table border="0" cellpadding="20px" bgcolor="" height="150px"></div>
+                    <tr>
+                        <td> Name </td>
+                        <td><input id="nama" type="text" name=""></td>
+                    </tr>
+                    <tr>
+                        <td> Address </td>
+                        <td><input id="address" type="text" name=""></td>
+                    </tr>
+                    <tr>
+                        <td> Email </td>
+                        <td><input id="email" type="email" min="0" name=""></td>
+                    </tr>
+                    <tr>
+                        <td><button id="edit">Edit</button></td>
+                        <td><button id="submit">Submit</button></td>
+                    </tr>
+                </table> 
+        </form>
+    </body>
+    <script>
+        $("#submit").click(function(){
+            $("#nama").prop("disabled",true);
+            $("#address").prop("disabled",true);
+            $("#email").prop("disabled",true);
+            $("#edit").prop("disabled",false);
+            $("#submit").prop("disabled",true);
+        });
+        $("#edit").click(function(){
+            $("#nama").prop("disabled",false);
+            $("#address").prop("disabled",false);
+            $("#email").prop("disabled",false);
+            $("#edit").prop("disabled",true);
+            $("#submit").prop("disabled",false);
+        });
+    </script>
+</html>
